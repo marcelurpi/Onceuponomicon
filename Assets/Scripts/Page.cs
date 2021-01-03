@@ -17,9 +17,9 @@ public class Page : MonoBehaviour
     private void OnValidate()
     {
         pageText.OnValidate();
+        RenderPageText();
     }
 
-    [ContextMenu("RenderPageText")]
     private void RenderPageText()
     {
         StringBuilder builder = new StringBuilder();
