@@ -10,6 +10,14 @@ public class Gap
 
     public bool DoesConsume() => consumes;
     public Pattern[] GetPatterns() => patterns;
+
+    public void OnValidate()
+    {
+        foreach (Pattern pattern in patterns)
+        {
+            pattern.OnValidate();
+        }
+    }
     
     public void FillGap(Word word) 
     {

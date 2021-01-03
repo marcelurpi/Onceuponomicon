@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PageText : MonoBehaviour
+[System.Serializable]
+public class PageText
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private PageTextModule[] modules;
 
-    // Update is called once per frame
-    void Update()
+    public PageTextModule[] GetModules() => modules;
+
+    public void OnValidate()
     {
-        
+        foreach (PageTextModule module in modules)
+        {
+            module.OnValidate();
+        }
     }
 }

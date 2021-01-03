@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Pattern
 {
-    private enum PatternType
+    private enum Type
     {
         HasAttack,
         HasArmor,
@@ -13,22 +13,28 @@ public class Pattern
         Over10Attack,
     };
 
-    [SerializeField] private PatternType patternType;
+    [HideInInspector] [SerializeField] private string typeName;
+    [SerializeField] private Type type;
     [SerializeField] private PageText response;
 
     public PageText GetResponse() => response;
 
+    public void OnValidate()
+    {
+        typeName = type.ToString();
+    }
+
     public bool Matches(Word word) 
     {
-        switch (patternType) 
+        switch (type) 
         {
-            case PatternType.HasAttack:
+            case Type.HasAttack:
                 return WordHasTag<AttackTag>(word);
-            case PatternType.HasArmor:
+            case Type.HasArmor:
                 return WordHasTag<ArmorTag>(word);
-            case PatternType.HasHeal:
+            case Type.HasHeal:
                 return WordHasTag<HealTag>(word);
-            case PatternType.Over10Attack:
+            case Type.Over10Attack:
                 AttackTag tag = WordGetTag<AttackTag>(word);
                 return tag != null && tag.GetBaseDamage() > 10;
         }
