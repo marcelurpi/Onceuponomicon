@@ -217,6 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6378343096679664651}
   - component: {fileID: 6378343096679665141}
+  - component: {fileID: 4214168025546761819}
   m_Layer: 5
   m_Name: Page
   m_TagString: Untagged
@@ -253,3 +254,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6378343096679664648}
   m_CullTransparentMesh: 0
+--- !u!114 &4214168025546761819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378343096679664648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a316f6dd6b685142904e79c6a9c77d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 7598890}
+  pageText:
+    modules:
+    - typeName: Text
+      type: 0
+      text: 'You are a young guy who has gone on an adventure.
+
+        So you''re
+        expecting brutal heroic fights with exotic creatures?
+
+        That''s why
+        you should be carrying a '
+      word: {fileID: 0}
+      gap:
+        consumes: 0
+        patterns: []
+    - typeName: Word
+      type: 1
+      text: 
+      word: {fileID: 11400000, guid: 8e8e358bfe09d4a4992d37a041a88419, type: 2}
+      gap:
+        consumes: 0
+        patterns: []
+    - typeName: Text
+      type: 0
+      text: ' and a '
+      word: {fileID: 0}
+      gap:
+        consumes: 0
+        patterns: []
+    - typeName: Word
+      type: 1
+      text: 
+      word: {fileID: 11400000, guid: fec4ccefcd1e5bc4d8a3268b1409a710, type: 2}
+      gap:
+        consumes: 0
+        patterns: []
+    - typeName: Text
+      type: 0
+      text: '.
+
+        Sure you are brave, but are you brave enough for everything
+        that is to come?
+
+        Definitely no.
+
+        You are not ready.
+
+        But
+        you have already accepted the challenge.'
+      word: {fileID: 0}
+      gap:
+        consumes: 0
+        patterns: []
