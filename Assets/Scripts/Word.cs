@@ -15,7 +15,7 @@ public class Word : ScriptableObject
     public string GetWord() => word;
     public Tag[] GetTags() => tags;
 
-    private void OnEnable()
+    private void OnDisable()
     {
         used = false;
     }

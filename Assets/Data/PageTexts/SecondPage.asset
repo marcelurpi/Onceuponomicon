@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ddd40da26d77076836f4511ee8fa5a, type: 3}
+  m_Name: SecondPage
+  m_EditorClassIdentifier: 
+  modules:
+  - typeName: Text
+    type: 0
+    text: '<size=60>You encounter a BOSS!!!</size>
+
+
+      You use a '
+    word: {fileID: 0}
+    gap:
+      patterns: []
+  - typeName: Gap
+    type: 2
+    text: 
+    word: {fileID: 0}
+    gap:
+      patterns:
+      - typeName: HasAttack
+        type: 0
+        response: {fileID: 11400000, guid: 73dc4c66309f6e241a303a08270c97aa, type: 2}
+      - typeName: HasArmor
+        type: 1
+        response: {fileID: 11400000, guid: e873b562557d0e047b38431c8034f343, type: 2}
+  - typeName: Text
+    type: 0
+    text: ' against the boss.'
+    word: {fileID: 0}
+    gap:
+      patterns: []

@@ -21,9 +21,20 @@ public class PageTextModule
     public Word GetWord() => word;
     public Gap GetGap() => gap;
 
+    public void OnDisable()
+    {
+        gap.OnDisable();
+    }
+
     public void OnValidate()
     {
         typeName = type.ToString();
         gap.OnValidate();
+    }
+
+    public PageTextModule(string text)
+    {
+        type = Type.Text;
+        this.text = text;
     }
 }

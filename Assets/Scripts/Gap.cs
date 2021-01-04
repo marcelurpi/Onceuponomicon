@@ -7,11 +7,17 @@ public class Gap
 {
     public System.Action OnGapFilled;
 
-    [SerializeField] private string fillWord;
     [SerializeField] private Pattern[] patterns;
+
+    private string fillWord;
 
     public string GetFillWord() => fillWord;
     public Pattern[] GetPatterns() => patterns;
+
+    public void OnDisable()
+    {
+        fillWord = null;
+    }
 
     public void OnValidate()
     {
@@ -28,7 +34,7 @@ public class Gap
         {
             if (pattern.Matches(word)) 
             {
-                //TODO: Implement respones 
+                Page.current.AddPageText(pattern.GetResponse());
                 break;
             }
         }

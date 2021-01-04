@@ -2,12 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class PageText
+[CreateAssetMenu]
+public class PageText : ScriptableObject
 {
     [SerializeField] private PageTextModule[] modules;
 
     public PageTextModule[] GetModules() => modules;
+
+    public void OnDisable()
+    {
+        foreach (PageTextModule module in modules)
+        {
+            module.OnDisable();
+        }
+    }
 
     public void OnValidate()
     {
@@ -15,5 +23,10 @@ public class PageText
         {
             module.OnValidate();
         }
+    }
+
+    public PageText(PageTextModule[] modules)
+    {
+        this.modules = modules;
     }
 }

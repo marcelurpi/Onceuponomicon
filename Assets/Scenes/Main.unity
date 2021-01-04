@@ -373,18 +373,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7598890, guid: 4e875fecd620281439466d37d761c428, type: 3}
       propertyPath: m_text
-      value: '<size=60>You encounter a BOSS!!!</size>
-
-
-        You use a _____ against
-        the boss.'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
         type: 3}
-      propertyPath: wordPrefab
-      value: 
-      objectReference: {fileID: 5133509856107518441, guid: fa059a09e82a4be42801c37675a351d5,
+      propertyPath: right
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
         type: 3}
+      propertyPath: pageText
+      value: 
+      objectReference: {fileID: 11400000, guid: 428cc4898c1680e43ba90a0e941163e5,
+        type: 2}
     - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
         type: 3}
       propertyPath: pageText.modules.Array.size
@@ -397,6 +398,11 @@ PrefabInstance:
 
 
         You use a '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
+        type: 3}
+      propertyPath: pageText.modules.Array.data[0].type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
         type: 3}
@@ -415,8 +421,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
         type: 3}
+      propertyPath: pageText.modules.Array.data[0].typeName
+      value: Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
+        type: 3}
       propertyPath: pageText.modules.Array.data[1].typeName
       value: Gap
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
+        type: 3}
+      propertyPath: pageText.modules.Array.data[1].gap.patterns.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
+        type: 3}
+      propertyPath: pageText.modules.Array.data[1].gap.patterns.Array.data[0].type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
+        type: 3}
+      propertyPath: pageText.modules.Array.data[1].gap.patterns.Array.data[0].typeName
+      value: HasAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
+        type: 3}
+      propertyPath: pageText.modules.Array.data[1].gap.patterns.Array.data[0].response.modules.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
+        type: 3}
+      propertyPath: pageText.modules.Array.data[1].gap.patterns.Array.data[0].response.modules.Array.data[0].type
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6378343096679664648, guid: 4e875fecd620281439466d37d761c428,
         type: 3}
@@ -709,24 +745,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7598890, guid: 4e875fecd620281439466d37d761c428, type: 3}
       propertyPath: m_text
-      value: 'You are a young guy who has gone on an adventure.
-
-        So you''re
-        expecting brutal heroic fights with exotic creatures?
-
-        That''s why
-        you should be carrying a <b>sword</b> and a <b>shield</b>.
-
-        Sure
-        you are brave, but are you brave enough for everything that is to come?
-
-        Definitely
-        no.
-
-        You are not ready.
-
-        But you have already accepted the
-        challenge.'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7598890, guid: 4e875fecd620281439466d37d761c428, type: 3}
       propertyPath: m_lineSpacing
@@ -736,6 +755,12 @@ PrefabInstance:
       propertyPath: m_wordWrappingRatios
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
+        type: 3}
+      propertyPath: pageText
+      value: 
+      objectReference: {fileID: 11400000, guid: b1ca2f7f2f838a24b8bb1bacd09c95df,
+        type: 2}
     - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
         type: 3}
       propertyPath: wordPrefab
@@ -758,6 +783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: pageText.modules.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
+        type: 3}
+      propertyPath: pageText.modules.Array.data[0].type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
         type: 3}
@@ -801,6 +831,11 @@ PrefabInstance:
 
         But you have already accepted the
         challenge.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
+        type: 3}
+      propertyPath: pageText.modules.Array.data[0].typeName
+      value: Text
       objectReference: {fileID: 0}
     - target: {fileID: 4214168025546761819, guid: 4e875fecd620281439466d37d761c428,
         type: 3}

@@ -6,8 +6,8 @@ public class WordBehaviour : MonoBehaviour
 {
     public static WordBehaviour draggedWord;
 
-    [SerializeField] private bool inInventory;
-    [SerializeField] private Word word;
+    private bool inInventory;
+    private Word word;
 
     private Vector3 lastValidPos;
     private GapBehaviour snappedGap;

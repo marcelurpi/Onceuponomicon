@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Page : MonoBehaviour
 {
+    public static Page current;
+
     [System.Serializable]
     private struct IndexModule
     {
@@ -13,8 +15,11 @@ public class Page : MonoBehaviour
         public PageTextModule module;
     }
 
+    [SerializeField] private bool right;
     [SerializeField] private TextMeshProUGUI textMesh;
     [SerializeField] private PageText pageText;
+
+    private PageTextModule[] pageTextModules;
 
     [SerializeField] private GameObject wordPrefab;
 
@@ -26,18 +31,31 @@ public class Page : MonoBehaviour
 
     public static readonly int GAP_COLLIDE_RANGE = 20;
 
+    public void AddPageText(PageText pageText)
+    {
+        List<PageTextModule> modules = new List<PageTextModule>(pageTextModules);
+        modules.Add(new PageTextModule("\n\n"));
+        modules.AddRange(pageText.GetModules());
+        pageTextModules = modules.ToArray();
+        RenderPageText(false);
+    }
+
+    private void Awake()
+    {
+        if (right)
+        {
+            current = this;
+        }
+    }
+
     private void Start()
     {
+        pageTextModules = pageText.GetModules();
         wordIndices = new List<IndexModule>();
         gapIndices = new List<IndexModule>();
         RenderPageText(true);
 
         WordInventory.instance.OnInventoryUpdated += () => RenderPageText(false);
-    }
-
-    private void OnValidate()
-    {
-        pageText.OnValidate();
     }
 
     private void GenerateWordGameObjects()
@@ -96,7 +114,7 @@ public class Page : MonoBehaviour
     private void RenderPageText(bool generateGameObjects)
     {
         StringBuilder builder = new StringBuilder();
-        foreach (PageTextModule module in pageText.GetModules())
+        foreach (PageTextModule module in pageTextModules)
         {
             switch (module.GetModuleType())
             {

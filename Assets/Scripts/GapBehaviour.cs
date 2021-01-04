@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class GapBehaviour : MonoBehaviour
 {
-    [SerializeField] private Gap gap;
-
     private bool mouseOver;
+    private Gap gap;
     private Camera mainCamera;
 
     public Gap GetGap() => gap;
