@@ -5,11 +5,18 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Word : ScriptableObject
 {
-    [SerializeField] private bool singleUse;
     [SerializeField] private string word;
     [SerializeField] private Tag[] tags;
 
-    public bool IsSingleUse() => singleUse;
+    private bool used;
+
+    public bool IsUsed() => used;
+    public void SetUsed(bool used) => this.used = used;
     public string GetWord() => word;
     public Tag[] GetTags() => tags;
+
+    private void OnEnable()
+    {
+        used = false;
+    }
 }

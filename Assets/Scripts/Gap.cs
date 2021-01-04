@@ -5,10 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class Gap
 {
-    [SerializeField] private bool consumes;
+    public System.Action OnGapFilled;
+
+    [SerializeField] private string fillWord;
     [SerializeField] private Pattern[] patterns;
 
-    public bool DoesConsume() => consumes;
+    public string GetFillWord() => fillWord;
     public Pattern[] GetPatterns() => patterns;
 
     public void OnValidate()
@@ -21,12 +23,15 @@ public class Gap
     
     public void FillGap(Word word) 
     {
+        fillWord = word.GetWord();
         foreach (Pattern pattern in patterns)
         {
             if (pattern.Matches(word)) 
             {
                 //TODO: Implement respones 
+                break;
             }
         }
+        OnGapFilled?.Invoke();
     } 
 }
