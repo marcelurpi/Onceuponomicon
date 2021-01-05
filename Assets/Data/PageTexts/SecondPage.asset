@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ddd40da26d77076836f4511ee8fa5a, type: 3}
   m_Name: SecondPage
   m_EditorClassIdentifier: 
+  centerText: 0
   modules:
   - typeName: Text
     type: 0
-    text: '<size=60>You encounter a BOSS!!!</size>
+    text: '<size=60>You encounter a Boss!!!</size>
 
 
       You use a '

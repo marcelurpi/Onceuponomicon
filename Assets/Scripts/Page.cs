@@ -17,19 +17,30 @@ public class Page : MonoBehaviour
 
     [SerializeField] private bool right;
     [SerializeField] private TextMeshProUGUI textMesh;
-    [SerializeField] private PageText pageText;
-
-    private PageTextModule[] pageTextModules;
-
+    [SerializeField] private GameObject pageNavigationArrow;
     [SerializeField] private GameObject wordPrefab;
 
     private List<IndexModule> wordIndices;
     private List<IndexModule> gapIndices;
+    private PageTextModule[] pageTextModules;
 
     private static readonly string GAP_STRING = "_____";
     private static readonly int WORD_COLLIDE_RANGE = 10;
 
     public static readonly int GAP_COLLIDE_RANGE = 20;
+
+    public void SetPageText(PageText pageText, bool hasArrow)
+    {
+        pageTextModules = pageText.GetModules();
+        textMesh.alignment = pageText.GetCenterText() ? TextAlignmentOptions.Center : TextAlignmentOptions.TopJustified;
+
+        wordIndices = new List<IndexModule>();
+        gapIndices = new List<IndexModule>();
+
+        pageNavigationArrow.SetActive(hasArrow);
+
+        RenderPageText(true, false);
+    }
 
     public void AddPageText(PageText pageText)
     {
@@ -37,7 +48,7 @@ public class Page : MonoBehaviour
         modules.Add(new PageTextModule("\n\n"));
         modules.AddRange(pageText.GetModules());
         pageTextModules = modules.ToArray();
-        RenderPageText(false);
+        RenderPageText(false, false);
     }
 
     private void Awake()
@@ -50,12 +61,7 @@ public class Page : MonoBehaviour
 
     private void Start()
     {
-        pageTextModules = pageText.GetModules();
-        wordIndices = new List<IndexModule>();
-        gapIndices = new List<IndexModule>();
-        RenderPageText(true);
-
-        WordInventory.instance.OnInventoryUpdated += () => RenderPageText(false);
+        WordInventory.instance.OnInventoryUpdated += () => RenderPageText(false, false);
     }
 
     private void GenerateWordGameObjects()
@@ -86,7 +92,7 @@ public class Page : MonoBehaviour
             GameObject gapGameObject = new GameObject("Gap", typeof(RectTransform), typeof(BoxCollider2D), typeof(GapBehaviour));
 
             TMP_WordInfo wordInfo = textMesh.GetTextInfo(textMesh.text).wordInfo[indexModule.index - 1];
-            Vector3 bottomLeft = new Vector3() 
+            Vector3 bottomLeft = new Vector3()
             {
                 x = textMesh.GetTextInfo(textMesh.text).characterInfo[wordInfo.lastCharacterIndex + 2].bottomLeft.x - GAP_COLLIDE_RANGE,
                 y = textMesh.GetTextInfo(textMesh.text).characterInfo[wordInfo.lastCharacterIndex].bottomLeft.y - GAP_COLLIDE_RANGE,
@@ -107,11 +113,11 @@ public class Page : MonoBehaviour
 
             gapGameObject.GetComponent<GapBehaviour>().SetGap(indexModule.module.GetGap());
 
-            indexModule.module.GetGap().OnGapFilled += () => RenderPageText(false);
+            indexModule.module.GetGap().OnGapFilled += () => RenderPageText(false, false);
         }
     }
 
-    private void RenderPageText(bool generateGameObjects)
+    private void RenderPageText(bool generateGameObjects, bool editor)
     {
         StringBuilder builder = new StringBuilder();
         foreach (PageTextModule module in pageTextModules)
@@ -126,7 +132,7 @@ public class Page : MonoBehaviour
                     {
                         wordIndices.Add(new IndexModule { index = CountWords(builder.ToString()), module = module });
                     }
-                    if (!WordInventory.instance.HasWord(module.GetWord()) && !module.GetWord().IsUsed())
+                    if (editor || !WordInventory.instance.HasWord(module.GetWord()) && !module.GetWord().IsUsed())
                     {
                         builder.Append("<b>").Append(module.GetWord().GetWord()).Append("</b>");
                     }
