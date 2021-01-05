@@ -9,8 +9,14 @@ AnimatorController:
   m_Name: Book
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: PassPage
+  - m_Name: PageFlip
     m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: PageFlipDir
+    m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -37,7 +43,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: PassPage
+    m_ConditionEvent: PageFlip
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4169465334055594363}
@@ -87,7 +93,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BookPage
+  m_Name: PageFlip
   m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
@@ -97,13 +103,13 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_SpeedParameterActive: 0
+  m_SpeedParameterActive: 1
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 3e9315a688938914e8576fab455eca1f, type: 2}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: PageFlipDir
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 

@@ -7,7 +7,6 @@ public class GapBehaviour : MonoBehaviour
     private bool mouseOver;
     private Gap gap;
     private Camera mainCamera;
-
     public Gap GetGap() => gap;
     public void SetGap(Gap gap) => this.gap = gap;
 

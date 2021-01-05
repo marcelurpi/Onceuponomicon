@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ddd40da26d77076836f4511ee8fa5a, type: 3}
+  m_Name: FirstPage
+  m_EditorClassIdentifier: 
+  centerText: 0
+  modules:
+  - typeName: Text
+    type: 0
+    text: 'You are a young guy who has gone on an adventure.
+
+      So you''re expecting
+      brutal heroic fights with exotic creatures?
+
+      That''s why you should be
+      carrying a '
+    word: {fileID: 0}
+    gap:
+      patterns: []
+  - typeName: Word
+    type: 1
+    text: 
+    word: {fileID: 11400000, guid: fec4ccefcd1e5bc4d8a3268b1409a710, type: 2}
+    gap:
+      patterns: []
+  - typeName: Text
+    type: 0
+    text: ' and a '
+    word: {fileID: 0}
+    gap:
+      patterns: []
+  - typeName: Word
+    type: 1
+    text: 
+    word: {fileID: 11400000, guid: 8e8e358bfe09d4a4992d37a041a88419, type: 2}
+    gap:
+      patterns: []
+  - typeName: Text
+    type: 0
+    text: '.
+
+      Sure you are brave, but are you brave enough for everything that
+      is to come?
+
+      Definitely no.
+
+      You are not ready.
+
+      But you
+      have already accepted the challenge.'
+    word: {fileID: 0}
+    gap:
+      patterns: []

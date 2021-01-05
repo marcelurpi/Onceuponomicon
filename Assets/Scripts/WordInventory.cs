@@ -45,8 +45,6 @@ public class WordInventory : MonoBehaviour
 
         wordBehaviour.GetComponent<BoxCollider2D>().size += new Vector2(Page.GAP_COLLIDE_RANGE * 2, Page.GAP_COLLIDE_RANGE * 2);
 
-        wordBehaviour.GetComponent<TextMeshProUGUI>().text = wordBehaviour.GetWord().GetWord();
-
         wordObjects.Add(wordBehaviour);
         OnInventoryUpdated?.Invoke();
     }

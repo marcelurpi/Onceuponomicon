@@ -6,9 +6,11 @@ public class WordBehaviour : MonoBehaviour
 {
     public static WordBehaviour draggedWord;
 
+    [SerializeField] private AudioClip clickSound;
+    [SerializeField] private AudioClip dropSound;
+
     private bool inInventory;
     private Word word;
-
     private Vector3 lastValidPos;
     private GapBehaviour snappedGap;
 
@@ -39,6 +41,7 @@ public class WordBehaviour : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.PlaySound(0.05f, clickSound);
             word.SetUsed(true);
             WordInventory.instance.AddWord(this);
         }
@@ -52,6 +55,7 @@ public class WordBehaviour : MonoBehaviour
             transform.localPosition = lastValidPos;
             if (snappedGap != null)
             {
+                AudioManager.instance.PlaySound(0.5f, dropSound);
                 snappedGap.GetGap().FillGap(word);
                 WordInventory.instance.UseWord(word);
             }
