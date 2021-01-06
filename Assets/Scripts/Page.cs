@@ -85,7 +85,7 @@ public class Page : MonoBehaviour
         };
         Vector3 topRight = new Vector3()
         {
-            x = prevTextMesh.GetTextInfo(prevTextMesh.text).characterInfo[wordInfo.lastCharacterIndex].topRight.x + 16 + 16 * wordLength,
+            x = prevTextMesh.GetTextInfo(prevTextMesh.text).characterInfo[wordInfo.lastCharacterIndex].topRight.x + 16 + 15 * wordLength,
             y = prevTextMesh.GetTextInfo(prevTextMesh.text).characterInfo[wordInfo.lastCharacterIndex].topRight.y + collideRange,
         };
         Vector3 size = new Vector2(Mathf.Abs(topRight.x - bottomLeft.x), Mathf.Abs(topRight.y - bottomLeft.y));

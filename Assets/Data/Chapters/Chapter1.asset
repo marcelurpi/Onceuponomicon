@@ -17,6 +17,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9f8e0bb4e52fe5747a3b98f7ebda965b, type: 2}
   - {fileID: 11400000, guid: b1ca2f7f2f838a24b8bb1bacd09c95df, type: 2}
   - {fileID: 11400000, guid: 428cc4898c1680e43ba90a0e941163e5, type: 2}
+  - {fileID: 11400000, guid: 793f1e7fee90041e5af073ade3453b40, type: 2}
+  - {fileID: 11400000, guid: fe0e9073cff6c7c1d927c37761669e59, type: 2}
+  - {fileID: 11400000, guid: 428cc4898c1680e43ba90a0e941163e5, type: 2}
+  - {fileID: 11400000, guid: 428cc4898c1680e43ba90a0e941163e5, type: 2}
+  - {fileID: 11400000, guid: 428cc4898c1680e43ba90a0e941163e5, type: 2}
+  - {fileID: 11400000, guid: 428cc4898c1680e43ba90a0e941163e5, type: 2}
   setupPage: {fileID: 11400000, guid: a7d933f64ed027140b3eff28f157cecd, type: 2}
   fightStatsPage: {fileID: 11400000, guid: bf89ec1b53ec517488516d85c8d0199e, type: 2}
   chapterMusic: {fileID: 8300000, guid: 8b34271754965cd4db72091f4e76ba15, type: 3}

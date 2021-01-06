@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ddd40da26d77076836f4511ee8fa5a, type: 3}
+  m_Name: DrunkResponse
+  m_EditorClassIdentifier: 
+  centerText: 0
+  modules:
+  - typeName: Text
+    type: 0
+    text: 'When you return to the bar, the innkeeper thanks you and presents you
+      with a blalalaa blalalaallala '
+    word: {fileID: 0}
+    gap:
+      patterns: []
+  - typeName: Word
+    type: 1
+    text: 
+    word: {fileID: 11400000, guid: ba18c494ff65b68fc8d8a352d9a77f67, type: 2}
+    gap:
+      patterns: []
+  - typeName: Text
+    type: 0
+    text: for getting that troublesome orc out of the tavern.
+    word: {fileID: 0}
+    gap:
+      patterns: []

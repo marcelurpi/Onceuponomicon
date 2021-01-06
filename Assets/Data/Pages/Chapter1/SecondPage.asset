@@ -16,10 +16,12 @@ MonoBehaviour:
   modules:
   - typeName: Text
     type: 0
-    text: '<size=60>You encounter a Boss!!!</size>
+    text: 'Suddenly you feel a slight push on your back, you turn around astonished
+      and you see a drunk orc looking you in the eyes with bad intentions, without
+      knowing how you got to that situation the drunk and moody orc goes towards
+      you with the intention of hitting you.
 
-
-      You use a '
+      You defend yourself with a '
     word: {fileID: 0}
     gap:
       patterns: []
@@ -29,15 +31,27 @@ MonoBehaviour:
     word: {fileID: 0}
     gap:
       patterns:
-      - tagName: Attack
+      - tagName: Attack_Tier_1
         tag: 0
-        response: {fileID: 11400000, guid: 73dc4c66309f6e241a303a08270c97aa, type: 2}
-      - tagName: Defense
+        response: {fileID: 11400000, guid: e873b562557d0e047b38431c8034f343, type: 2}
+      - tagName: Attack_Tier_2
         tag: 1
+        response: {fileID: 11400000, guid: e873b562557d0e047b38431c8034f343, type: 2}
+      - tagName: Attack_Tier_3
+        tag: 2
+        response: {fileID: 11400000, guid: e873b562557d0e047b38431c8034f343, type: 2}
+      - tagName: Defense_Tier_1
+        tag: 5
+        response: {fileID: 11400000, guid: e873b562557d0e047b38431c8034f343, type: 2}
+      - tagName: Defense_Tier_2
+        tag: 4
+        response: {fileID: 11400000, guid: e873b562557d0e047b38431c8034f343, type: 2}
+      - tagName: Defense_Tier_3
+        tag: 3
         response: {fileID: 11400000, guid: e873b562557d0e047b38431c8034f343, type: 2}
   - typeName: Text
     type: 0
-    text: ' against the boss. '
+    text: 
     word: {fileID: 0}
     gap:
       patterns: []

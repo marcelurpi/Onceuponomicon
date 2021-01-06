@@ -16,47 +16,25 @@ MonoBehaviour:
   modules:
   - typeName: Text
     type: 0
-    text: 'You are a young guy who has gone on an adventure.
-
-      So you''re expecting
-      brutal heroic fights with exotic creatures?
-
-      That''s why you should be
-      carrying a '
+    text: 'You find yourself sitting on a '
     word: {fileID: 0}
     gap:
       patterns: []
   - typeName: Word
     type: 1
     text: 
-    word: {fileID: 11400000, guid: fec4ccefcd1e5bc4d8a3268b1409a710, type: 2}
+    word: {fileID: 11400000, guid: cd6a054df2e1619c2bcbf1175908dbfc, type: 2}
     gap:
       patterns: []
   - typeName: Text
     type: 0
-    text: ' and a '
-    word: {fileID: 0}
-    gap:
-      patterns: []
-  - typeName: Word
-    type: 1
-    text: 
-    word: {fileID: 11400000, guid: 8e8e358bfe09d4a4992d37a041a88419, type: 2}
-    gap:
-      patterns: []
-  - typeName: Text
-    type: 0
-    text: '.
-
-      Sure you are brave, but are you brave enough for everything that
-      is to come?
-
-      Definitely no.
-
-      You are not ready.
-
-      But you
-      have already accepted the challenge.'
+    text: '  bar of a tavern, you start to feel nauseous, you try to open your eyes,
+      you see that the innkeeper looks a bit strange, it surprises you because it
+      is something you have never seen before, you ask her if she has any type of
+      concoction so that this discomfort goes away, the tavern keeper candidly offers
+      you a brewage with an unpleasant aspect, which according to her will make the
+      discomfort go away, you drink the brewage that the tavern keeper has offered
+      you so kindly. '
     word: {fileID: 0}
     gap:
       patterns: []
