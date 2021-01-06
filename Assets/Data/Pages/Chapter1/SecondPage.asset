@@ -29,15 +29,15 @@ MonoBehaviour:
     word: {fileID: 0}
     gap:
       patterns:
-      - typeName: HasAttack
-        type: 0
+      - tagName: Attack
+        tag: 0
         response: {fileID: 11400000, guid: 73dc4c66309f6e241a303a08270c97aa, type: 2}
-      - typeName: HasArmor
-        type: 1
+      - tagName: Defense
+        tag: 1
         response: {fileID: 11400000, guid: e873b562557d0e047b38431c8034f343, type: 2}
   - typeName: Text
     type: 0
-    text: ' against the boss.'
+    text: ' against the boss. '
     word: {fileID: 0}
     gap:
       patterns: []

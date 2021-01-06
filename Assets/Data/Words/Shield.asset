@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20fb6c1413845b4894d2b35c377b56d, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  singleUse: 0
   word: shield
-  tags:
-  - {fileID: 11400000, guid: 44a9829100cb58248904760b464c5448, type: 2}
+  tags: 01000000

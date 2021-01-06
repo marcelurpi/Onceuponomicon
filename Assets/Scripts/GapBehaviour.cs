@@ -17,7 +17,7 @@ public class GapBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (string.IsNullOrEmpty(gap.GetFillWord()))
+        if (gap.GetFillWord() == null || string.IsNullOrEmpty(gap.GetFillWord().GetWord()))
         {
             bool wasOver = mouseOver;
             mouseOver = IsMouseOver();

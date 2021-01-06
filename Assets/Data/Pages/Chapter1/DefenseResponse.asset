@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55ddd40da26d77076836f4511ee8fa5a, type: 3}
-  m_Name: AttackResponse
+  m_Name: DefenseResponse
   m_EditorClassIdentifier: 
+  centerText: 0
   modules:
   - typeName: Text
     type: 0
-    text: You deal damage to the boss
+    text: You take less damage from the boss
     word: {fileID: 0}
     gap:
       patterns: []

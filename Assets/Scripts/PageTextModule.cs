@@ -37,4 +37,10 @@ public class PageTextModule
         type = Type.Text;
         this.text = text;
     }
+
+    public PageTextModule(Gap gap)
+    {
+        type = Type.Gap;
+        this.gap = gap;
+    }
 }

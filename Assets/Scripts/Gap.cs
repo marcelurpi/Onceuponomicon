@@ -9,10 +9,16 @@ public class Gap
 
     [SerializeField] private Pattern[] patterns;
 
-    private string fillWord;
+    private bool setup;
+    private Word fillWord;
 
-    public string GetFillWord() => fillWord;
+    public Word GetFillWord() => fillWord;
     public Pattern[] GetPatterns() => patterns;
+
+    public Gap(bool setup)
+    {
+        this.setup = setup;
+    }
 
     public void OnDisable()
     {
@@ -29,13 +35,16 @@ public class Gap
     
     public void FillGap(Word word) 
     {
-        fillWord = word.GetWord();
-        foreach (Pattern pattern in patterns)
+        fillWord = word;
+        if (!setup)
         {
-            if (pattern.Matches(word)) 
+            foreach (Pattern pattern in patterns)
             {
-                Page.current.AddPageText(pattern.GetResponse());
-                break;
+                if (pattern.Matches(word))
+                {
+                    Page.current.AddPageText(pattern.GetResponse());
+                    break;
+                }
             }
         }
         OnGapFilled?.Invoke();

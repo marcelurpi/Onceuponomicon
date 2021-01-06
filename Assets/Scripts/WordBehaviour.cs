@@ -11,8 +11,11 @@ public class WordBehaviour : MonoBehaviour
 
     private bool inInventory;
     private Word word;
+    private Vector3 baseScale;
     private Vector3 lastValidPos;
     private GapBehaviour snappedGap;
+
+    
 
     public Word GetWord() => word;
     public void SetWord(Word word) => this.word = word;
@@ -31,6 +34,11 @@ public class WordBehaviour : MonoBehaviour
             transform.position = snappedGap.transform.position;
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y + 5);
         }
+    }
+
+    private void OnMouseEnter()
+    {
+        
     }
 
     private void OnMouseDown()
